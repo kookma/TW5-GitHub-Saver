@@ -177,6 +177,14 @@ Error message and password prompt
 
 <li>$:/palette</li>
 
+<li>$:/plugins/.mr/shiraz/macro/alerts</li>
+
+<li>$:/plugins/.mr/shiraz/snippet/alert</li>
+
+<li>$:/plugins/.mr/shiraz/stylesheet/alerts-leftbar</li>
+
+<li>$:/plugins/.mr/shiraz/stylesheet/bs/alerts</li>
+
 <li>$:/SiteSubtitle</li>
 
 <li>$:/SiteTitle</li>
@@ -204,6 +212,8 @@ Error message and password prompt
 <li>Home</li>
 
 <li>Mohammad</li>
+
+<li>Publish with GitHub</li>
 
 <li>Status</li>
 
@@ -9418,8 +9428,8 @@ very-muted-foreground: #888888
     }
 }</pre>
 </div>
-<div created="20190409192032854" modified="20190409192033763" title="$:/DefaultTiddlers">
-<pre>Home
+<div created="20190409192032854" creator="Mohammad" modified="20190409195056644" modifier="Mohammad" title="$:/DefaultTiddlers">
+<pre>[tag[start]]
 </pre>
 </div>
 <div copyright="This icon is belong to GitHub Inc and all rights reserved to GitHub Inc." created="20190409194036110" creator="Mohammad" modified="20190409194123453" modifier="Mohammad" title="$:/favicon.ico" type="image/x-icon">
@@ -9443,14 +9453,125 @@ very-muted-foreground: #888888
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Mohammad]]
-# [[app.ico]]</pre>
+# [[$:/plugins/.mr/shiraz/macro/alerts]]
+# [[$:/plugins/.mr/shiraz/snippet/alert]]
+# [[$:/plugins/.mr/shiraz/stylesheet/alerts-leftbar]]
+# [[$:/plugins/.mr/shiraz/stylesheet/bs/alerts]]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
 <div created="20190409193618581" modified="20190409193618581" title="$:/palette">
 <pre>$:/_CustomPalette</pre>
+</div>
+<div created="20180821095049685" creator="Mohammad" modified="20190109075227088" modifier="Mohammad" tags="$:/tags/Macro" title="$:/plugins/.mr/shiraz/macro/alerts">
+<pre>\define alert(type:&quot;primary&quot; text:&quot;&quot;, width:&quot;100%&quot;, class:&quot;&quot;)
+&lt;div class=&quot;alert alert-$type$ $class$&quot; style=&quot;width:$width$;&quot;&gt;
+$text$
+&lt;/div&gt;
+\end
+
+\define alert-leftbar(type:&quot;primary&quot; text:&quot;&quot;, width:&quot;100%&quot;)
+&lt;div class=&quot;alert bg-transparent leftbar border-$type$&quot; style=&quot;width:$width$;&quot;&gt;
+$text$
+&lt;/div&gt;
+\end
+&lt;pre&gt;&lt;$view/&gt;&lt;/pre&gt;</pre>
+</div>
+<div caption="Alert" created="20180905115529625" creator="Mohammad" modified="20190109075418576" modifier="Mohammad" tags="$:/tags/TextEditor/Snippet" title="$:/plugins/.mr/shiraz/snippet/alert">
+<pre>&lt;&lt;alert type text:&quot;&quot; width:&quot;100&quot;&gt;&gt;</pre>
+</div>
+<div created="20181208184228896" creator="Mohammad" modified="20181216205630654" modifier="Mohammad" tags="$:/tags/Stylesheet" title="$:/plugins/.mr/shiraz/stylesheet/alerts-leftbar" type="text/css">
+<pre>.leftbar{
+  border-width:0px !important;
+  border-radius:0px !important;
+  border-left-width: 5px !important;
+}</pre>
+</div>
+<div created="20180820171551129" creator="Mohammad" modified="20181129200105625" modifier="Mohammad" tags="$:/tags/Stylesheet" title="$:/plugins/.mr/shiraz/stylesheet/bs/alerts" type="text/css">
+<pre>/*Was taken from bootstrap 4.1.3*/
+.alert {
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.alert-primary {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+.alert-primary hr {
+  border-top-color: #9fcdff;
+}
+.alert-secondary {
+  color: #383d41;
+  background-color: #e2e3e5;
+  border-color: #d6d8db;
+}
+
+.alert-secondary hr {
+  border-top-color: #c8cbcf;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-success hr {
+  border-top-color: #b1dfbb;
+}
+.alert-info {
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border-color: #bee5eb;
+}
+
+.alert-info hr {
+  border-top-color: #abdde5;
+}
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.alert-warning hr {
+  border-top-color: #ffe8a1;
+}
+
+.alert-danger {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+.alert-danger hr {
+  border-top-color: #f1b0b7;
+}
+.alert-light {
+  color: #818182;
+  background-color: #fefefe;
+  border-color: #fdfdfe;
+}
+
+.alert-light hr {
+  border-top-color: #ececf6;
+}
+.alert-dark {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca;
+}
+
+.alert-dark hr {
+  border-top-color: #b9bbbe;
+}
+</pre>
 </div>
 <div created="20190409191944119" modified="20190409192005599" title="$:/SiteSubtitle">
 <pre>publishing with Tiddlywiki</pre>
@@ -9461,7 +9582,7 @@ very-muted-foreground: #888888
 <div created="20190409193610725" modified="20190409193611989" title="$:/state/tab--1963855381">
 <pre>$:/core/ui/ControlPanel/Palette</pre>
 </div>
-<div created="20190409191821273" modified="20190409193832942" title="$:/state/tab-1749438307">
+<div created="20190409191821273" creator="Mohammad" modified="20190409195044242" modifier="Mohammad" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20190409191822698" modified="20190409192019561" title="$:/state/tab-2065006209">
@@ -9473,7 +9594,7 @@ very-muted-foreground: #888888
 <div created="20190409193835905" creator="M" modified="20190409193837719" modifier="Mohamma" title="$:/status/UserName">
 <pre>Mohammad</pre>
 </div>
-<div created="20190409194032956" creator="Mohammad" list="Home" modified="20190409194129141" modifier="Mohammad" title="$:/StoryList">
+<div list="Home [[Publish with GitHub]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9668,6 +9789,13 @@ Tehran, Iran
 Github: https://github.com/kookma
 Email : m[dot]rahmani[at]aut[dot]ac[dot]ir
 &quot;&quot;&quot;</pre>
+</div>
+<div created="20190409194412094" creator="Mohammad" modified="20190409195019003" modifier="Mohammad" tags="start" title="Publish with GitHub">
+<pre>!! GitHub Saver
+The new saving mechanism in TW 5.1.20pre lets to directly and simply publish with GitHub. Now, creating personal webpages, project and organization websites is a piece of cake.
+
+
+&lt;&lt;alert info &quot;GitHub Saver in Tiddlywiki 5.1.20 lets publish with GitHub. It is possible to create GitHub Pages using Tiddlywiki with the brand new GitHub Saver.&quot;&gt;&gt;</pre>
 </div>
 <div created="20190315074043002" creator="Mohammad" modified="20190409193823080" modifier="Mohammad" title="Status" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;dbadge &quot;Powerd by&quot; &quot;Tiddlywiki5 and GitHub-Pages&quot; info&gt;&gt;
