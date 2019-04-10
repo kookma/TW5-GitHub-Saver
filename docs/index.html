@@ -141,10 +141,6 @@ Error message and password prompt
 
 <p>This <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">TiddlyWiki</a> contains the following tiddlers:</p><p><ul>
 
-<li>.mr/macro/dbadge</li>
-
-<li>.mr/stylesheet/dbadge</li>
-
 <li>$:/_CustomPalette</li>
 
 <li>$:/config/AutoSave</li>
@@ -174,6 +170,10 @@ Error message and password prompt
 <li>$:/Import</li>
 
 <li>$:/isEncrypted</li>
+
+<li>$:/kookma/macro/dbadge</li>
+
+<li>$:/kookma/stylesheet/dbadge</li>
 
 <li>$:/palette</li>
 
@@ -217,8 +217,6 @@ Error message and password prompt
 
 <li>Status</li>
 
-<li>Test2</li>
-
 </ul>
 </p>
 
@@ -229,50 +227,6 @@ Error message and password prompt
 <!--~~ Ordinary tiddlers ~~-->
 
 <div id="storeArea" style="display:none;">
-<div created="20181203212737578" creator="Mohammad" modified="20181204193801168" modifier="Mohammad" tags="$:/tags/Macro badge tools" title=".mr/macro/dbadge">
-<pre>\define dbadge(subject,status, type:&quot;primary&quot;)
-&lt;div class=&quot;dbadge&quot;&gt;&lt;span class=&quot;dbadge-subject&quot;&gt;$subject$&lt;/span&gt;&lt;span class=&quot;dbadge-status dbadge-$type$ &quot;&gt;$status$&lt;/span&gt;&lt;/div&gt;
-\end
-</pre>
-</div>
-<div created="20181204192835967" creator="Mohammad" modified="20181204193708463" modifier="Mohammad" tags="badge $:/tags/Stylesheet" title=".mr/stylesheet/dbadge" type="text/css">
-<pre>/*Credits: 
-Nishant Srivastava https://codepen.io/nisrulz/pen/bpQWLW
-Mohammad Rahmani: https://github.com/kookma
-*/
-.dbadge {
- display: inline-block;
- margin: 0.0em;
-}
-.dbadge &gt; span {
-  color: #ffffff;
-  font-size: 0.8em;
-  font-weight: 400;
-  line-height: 1;
-  padding: .2em .6em;
-  text-align: center;
-  vertical-align: baseline;
-  white-space: nowrap;}
-
-.dbadge-subject{
-  background-color: #656565;
-  border-bottom-left-radius: 0.25em;
-  border-top-left-radius: 0.25em;}
-.dbadge-status {
-  border-bottom-right-radius: 0.25em;
-  border-top-right-radius: 0.25em;}
-
-.dbadge-primary {
-    background-color: #337ab7;}
-.dbadge-success {
-    background-color: #5cb85c;}
-.dbadge-info {
-    background-color: #5bc0de;}
-.dbadge-warning {
-    background-color: #f0ad4e;}
-.dbadge-danger {
-    background-color: #d9534f;}</pre>
-</div>
 <div description="For Federatial website" name="Federatial Custom Palette" tags="$:/tags/Palette" title="$:/_CustomPalette" type="application/x-tiddler-dictionary">
 <pre>federatial-white: #F9F9EB
 federatial-black: #292929
@@ -9463,6 +9417,50 @@ very-muted-foreground: #888888
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
+<div created="20181203212737578" creator="Mohammad" modified="20190410151758039" modifier="Mohammad" tags="$:/tags/Macro badge tools" title="$:/kookma/macro/dbadge">
+<pre>\define dbadge(subject,status, type:&quot;primary&quot;)
+&lt;div class=&quot;dbadge&quot;&gt;&lt;span class=&quot;dbadge-subject&quot;&gt;$subject$&lt;/span&gt;&lt;span class=&quot;dbadge-status dbadge-$type$ &quot;&gt;$status$&lt;/span&gt;&lt;/div&gt;
+\end
+</pre>
+</div>
+<div created="20181204192835967" creator="Mohammad" modified="20190410151813271" modifier="Mohammad" tags="badge $:/tags/Stylesheet" title="$:/kookma/stylesheet/dbadge" type="text/css">
+<pre>/*Credits: 
+Nishant Srivastava https://codepen.io/nisrulz/pen/bpQWLW
+Mohammad Rahmani: https://github.com/kookma
+*/
+.dbadge {
+ display: inline-block;
+ margin: 0.0em;
+}
+.dbadge &gt; span {
+  color: #ffffff;
+  font-size: 0.8em;
+  font-weight: 400;
+  line-height: 1;
+  padding: .2em .6em;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;}
+
+.dbadge-subject{
+  background-color: #656565;
+  border-bottom-left-radius: 0.25em;
+  border-top-left-radius: 0.25em;}
+.dbadge-status {
+  border-bottom-right-radius: 0.25em;
+  border-top-right-radius: 0.25em;}
+
+.dbadge-primary {
+    background-color: #337ab7;}
+.dbadge-success {
+    background-color: #5cb85c;}
+.dbadge-info {
+    background-color: #5bc0de;}
+.dbadge-warning {
+    background-color: #f0ad4e;}
+.dbadge-danger {
+    background-color: #d9534f;}</pre>
+</div>
 <div created="20190409193618581" modified="20190409193618581" title="$:/palette">
 <pre>$:/_CustomPalette</pre>
 </div>
@@ -9596,7 +9594,7 @@ $text$
 <div created="20190409193835905" creator="M" modified="20190409193837719" modifier="Mohamma" title="$:/status/UserName">
 <pre>Mohammad</pre>
 </div>
-<div created="20190410151554198" creator="Mohammad" list="$:/ControlPanel Home [[Publish with GitHub]]" modified="20190410151554198" modifier="Mohammad" title="$:/StoryList">
+<div list="Home [[Publish with GitHub]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9802,9 +9800,6 @@ The new saving mechanism in TW 5.1.20pre lets to directly and simply publish wit
 <div created="20190315074043002" creator="Mohammad" modified="20190409193823080" modifier="Mohammad" title="Status" type="text/vnd.tiddlywiki">
 <pre>&lt;&lt;dbadge &quot;Powerd by&quot; &quot;Tiddlywiki5 and GitHub-Pages&quot; info&gt;&gt;
 &lt;&lt;dbadge Tiddlywiki 5.1.18+ primary&gt;&gt; &lt;&lt;dbadge License MIT success&gt;&gt; &lt;&lt;dbadge Release &quot;0.1.0&quot; warning&gt;&gt; &lt;&lt;dbadge Status &quot;Trial&quot; danger&gt;&gt; </pre>
-</div>
-<div created="20190410082134867" creator="Mohammad" modified="20190410091922541" modifier="Mohammad" tags="" title="Test2">
-<pre>dffd</pre>
 </div>
 
 </div>
