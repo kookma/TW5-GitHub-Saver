@@ -5,4 +5,4 @@ The new GitHub Saver feature in TW 5.1.20 allows to open a Tiddlywiki hosted on 
 
 To see how TW5 + GitHub Saver works, see the demo at
 
-https://github.com/kookma/TW5-GitHub-Saver
+https://kookma.github.io/TW5-GitHub-Saver/
